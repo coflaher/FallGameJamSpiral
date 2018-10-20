@@ -10,12 +10,11 @@ public class playerController : MonoBehaviour {
 	[SerializeField] float distance;
 	public bool isMove = false;
 	[SerializeField] float duration;
-    Vector3 initialPosition;
-	// Use this for initialization
+    bool collided = false;
+	
 	void Start () 
 	{
 		rb = GetComponent<Rigidbody>();
-        initialPosition = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -41,7 +40,7 @@ public class playerController : MonoBehaviour {
     {
         if (isMove == true)
         {
-            StartCoroutine(move(1, initialPosition));
+            collided = true;
         }
     }
 
@@ -49,10 +48,29 @@ public class playerController : MonoBehaviour {
 	{
 		isMove = true;
 		float counter = 0;
+        Vector3 initialPosition = transform.position;
+
 		while(counter < duration)
-		{
+        {
+            float step = dir * distance / duration;
+
+            if (collided)
+            {
+                while (counter > 0 )
+                {
+                    counter--;
+                    transform.position = Vector3.MoveTowards(transform.position, target, -step);
+                    yield return null;
+                }
+
+                for (int i = 0; i < 5; i++)
+                    yield return null;
+                isMove = false;
+                collided = false;
+                yield break;
+            }
+
 			counter++;
-			float step = dir * distance / duration;
 			transform.position = Vector3.MoveTowards(transform.position, target, step);
 			yield return null;
 		}
@@ -60,7 +78,6 @@ public class playerController : MonoBehaviour {
         for (int i = 0; i < 5; i++)
 	    	yield return null;
 		isMove = false;
-        initialPosition = transform.position;
 	}
 	
 	
