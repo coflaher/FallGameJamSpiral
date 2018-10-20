@@ -14,17 +14,5 @@ public class EndTrigger : MonoBehaviour {
 		
 	}
 
-    private void OnCollisionEnter(Collision collision)
-    {
-            GetComponent<Rigidbody>().AddForce(0, -100, 0);
-    }
-    void OnCollisionExit(Collision collision)
-    {
-
-    }
-
-    void OnCollisionStay(Collision collision)
-    {
-
-    }
+  
 }

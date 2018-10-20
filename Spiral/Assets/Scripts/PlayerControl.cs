@@ -2,22 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControl : MonoBehaviour {
 
+public class PlayerControl : MonoBehaviour {
+    public Transform startpoint;
+    public Transform endpoint;
+   [SerializeField] GameObject ball;
+    
     public float speed = 4f;
     private Rigidbody rb;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-    }
-    void FixedUpdate()
-    {
-        Vector3 movement = new Vector3(0, 1, 0);
-        rb.AddForce(movement * speed);
-
         
     }
-
 
 
     // Update is called once per frame
@@ -26,7 +23,10 @@ public class PlayerControl : MonoBehaviour {
 	}
     void OnCollisionEnter(Collision collision)
     {
-        Destroy(collision.gameObject);
+       
+        transform.position = Vector3.MoveTowards(startpoint.position ,endpoint.position, speed * Time.deltaTime);
+        ball.GetComponent<playerController>().isMove = true;
+        
     }
      void OnCollisionExit(Collision collision)
     {
@@ -37,5 +37,6 @@ public class PlayerControl : MonoBehaviour {
     {
 
     }
+
 
 }
