@@ -25,13 +25,13 @@ public class WallRotation : MonoBehaviour {
         if (Input.GetKey(KeyCode.D))
         {
             float newRotation = transform.rotation.eulerAngles.y + rotationAngle;
-            StartCoroutine(Rotate(newRotation, 1));
+            StartCoroutine(Rotate(newRotation, 60));
             
         }
         else if (Input.GetKey(KeyCode.A))
         {
             float newRotation = transform.rotation.eulerAngles.y - rotationAngle;
-            StartCoroutine(Rotate(newRotation, 1));
+            StartCoroutine(Rotate(newRotation, 60));
         }
     }
 
@@ -44,7 +44,7 @@ public class WallRotation : MonoBehaviour {
         float counter = 0;
         while (counter < duration)
         {
-            counter += Time.deltaTime;
+            counter++;
             transform.rotation = Quaternion.Euler(0, Mathf.Lerp(currentRot, newRot, counter / duration), 0); //normalizes angle between -180 and 180
             yield return null;
         }

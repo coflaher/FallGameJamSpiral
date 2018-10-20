@@ -41,12 +41,14 @@ public class playerController : MonoBehaviour {
 		float counter = 0;
 		while(counter < duration)
 		{
-			counter += Time.deltaTime;
-			float step = dir * distance / duration * Time.deltaTime;
+			counter++;
+			float step = dir * distance / duration;
 			transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 			yield return null;
 		}
-		yield return new WaitForSeconds(.1f);
+
+        for (int i = 0; i < 5; i++)
+	    	yield return null;
 		isMove = false;
 	}
 	
