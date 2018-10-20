@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class PlayerControl : MonoBehaviour {
+public class WinState : MonoBehaviour {
     public Transform startpoint;
     public Transform endpoint;
    [SerializeField] GameObject ball;
