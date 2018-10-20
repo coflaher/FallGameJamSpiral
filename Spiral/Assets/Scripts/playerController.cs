@@ -7,7 +7,7 @@ public class playerController : MonoBehaviour {
 
 	[SerializeField] Rigidbody rb;
 	[SerializeField] Transform target;
-	[SerializeField] float speed;
+	[SerializeField] float distance;
 	public bool isMove = false;
 	[SerializeField] float duration;
 	// Use this for initialization
@@ -19,14 +19,17 @@ public class playerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{	
-		if (Input.GetKeyDown(KeyCode.W))
-		{
-			StartCoroutine(move(1));
-		}
-		else if (Input.GetKey(KeyCode.S))
-		{
-			StartCoroutine(move(-1));
-		}
+        if (!isMove)
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                StartCoroutine(move(1));
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                StartCoroutine(move(-1));
+            }
+        }
 	}
 	void FixedUpdate()
 	{
@@ -39,7 +42,7 @@ public class playerController : MonoBehaviour {
 		while(counter < duration)
 		{
 			counter += Time.deltaTime;
-			float step = dir * speed * Time.deltaTime;
+			float step = dir * distance / duration * Time.deltaTime;
 			transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 			yield return null;
 		}
