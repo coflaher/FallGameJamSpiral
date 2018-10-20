@@ -56,10 +56,12 @@ public class playerController : MonoBehaviour {
 
             if (collided)
             {
+                float counter2 = counter;
+                Vector3 newPosition = transform.position;
                 while (counter > 0 )
                 {
                     counter--;
-                    transform.position = Vector3.MoveTowards(transform.position, target, -step);
+                    transform.position = Vector3.Lerp(initialPosition, newPosition, counter / counter2);
                     yield return null;
                 }
 
