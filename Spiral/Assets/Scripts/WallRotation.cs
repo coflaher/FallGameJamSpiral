@@ -6,6 +6,7 @@ public class WallRotation : MonoBehaviour {
     
     [SerializeField] float rotationAngle;
     bool isRotating = false;
+    public static int rotating = 0;
    
     // Use this for initialization
     void Start() {
@@ -14,7 +15,7 @@ public class WallRotation : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (!isRotating)
+        if (!isRotating && !playerController.isMove)
         {
             Move();
         }
@@ -37,6 +38,7 @@ public class WallRotation : MonoBehaviour {
 
     IEnumerator Rotate(float newRot, float duration)
     {
+        rotating++;
         isRotating = true;
    
         float currentRot = transform.rotation.eulerAngles.z;
@@ -53,5 +55,6 @@ public class WallRotation : MonoBehaviour {
            yield return null;
 
         isRotating = false;
+        rotating--;
     }
 }

@@ -8,9 +8,9 @@ public class playerController : MonoBehaviour {
 	[SerializeField] Rigidbody rb;
 	[SerializeField] Transform target;
 	[SerializeField] float distance;
-	public bool isMove = false;
+	public static bool isMove = false;
 	[SerializeField] float duration;
-    bool collided = false;
+    [SerializeField] bool collided = false;
 	
 	void Start () 
 	{
@@ -20,7 +20,7 @@ public class playerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{	
-        if (!isMove)
+        if (!isMove && WallRotation.rotating == 0)
         {
             if (Input.GetKey(KeyCode.W))
             {
