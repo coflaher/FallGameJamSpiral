@@ -6,8 +6,6 @@ public class WallRotation : MonoBehaviour {
     
     [SerializeField] float rotationAngle;
     bool isRotating = false;
-
-
     // Use this for initialization
     void Start() {
 
@@ -15,17 +13,21 @@ public class WallRotation : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        Move();
+        if (!isRotating)
+        {
+            Move();
+        }
     }
 
     private void Move()
     {
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             float newRotation = transform.rotation.eulerAngles.y + rotationAngle;
             StartCoroutine(Rotate(newRotation, 1));
+            
         }
-        else if (Input.GetKeyDown(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A))
         {
             float newRotation = transform.rotation.eulerAngles.y - rotationAngle;
             StartCoroutine(Rotate(newRotation, 1));
@@ -34,10 +36,6 @@ public class WallRotation : MonoBehaviour {
 
     IEnumerator Rotate(float newRot, float duration)
     {
-        if (isRotating)
-        {
-            yield break;
-        }
         isRotating = true;
    
         float currentRot = transform.rotation.eulerAngles.y;
@@ -46,9 +44,10 @@ public class WallRotation : MonoBehaviour {
         while (counter < duration)
         {
             counter += Time.deltaTime;
-            transform.rotation = Quaternion.Euler(0, Mathf.Lerp(currentRot, newRot, counter / duration), 0);
+            transform.rotation = Quaternion.Euler(0, Mathf.Lerp(currentRot, newRot, counter / duration), 0); //normalizes angle between -180 and 180
             yield return null;
         }
+        yield return new WaitForSeconds(.1f);
         isRotating = false;
     }
 }
