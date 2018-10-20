@@ -48,7 +48,10 @@ public class WallRotation : MonoBehaviour {
             transform.rotation = Quaternion.Euler(0, Mathf.Lerp(currentRot, newRot, counter / duration), 0); //normalizes angle between -180 and 180
             yield return null;
         }
-        yield return new WaitForSeconds(.1f);
+        
+        for (int i = 0; i < 5; i++)
+           yield return null;
+
         isRotating = false;
     }
 }
