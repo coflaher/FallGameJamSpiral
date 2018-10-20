@@ -6,6 +6,7 @@ public class WallRotation : MonoBehaviour {
     
     [SerializeField] float rotationAngle;
     bool isRotating = false;
+   
     // Use this for initialization
     void Start() {
 

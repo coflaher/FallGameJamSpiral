@@ -242,7 +242,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAngle: -15
-  isRotating: 0
 --- !u!1 &400878619 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 574f0e6f9d9af2a46b7b9dd6317d4282,
@@ -260,7 +259,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAngle: 30
-  isRotating: 0
 --- !u!1001 &610800064
 Prefab:
   m_ObjectHideFlags: 0
@@ -380,6 +378,90 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1001 &911635518
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1506685405}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 7f4dfb9ff42543d4095cfc6a4244da07, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.3934765
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7f4dfb9ff42543d4095cfc6a4244da07, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.8065968
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7f4dfb9ff42543d4095cfc6a4244da07, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.5731277
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7f4dfb9ff42543d4095cfc6a4244da07, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7f4dfb9ff42543d4095cfc6a4244da07, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7f4dfb9ff42543d4095cfc6a4244da07, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7f4dfb9ff42543d4095cfc6a4244da07, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 7f4dfb9ff42543d4095cfc6a4244da07, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f4dfb9ff42543d4095cfc6a4244da07, type: 3}
+  m_IsPrefabAsset: 0
+--- !u!1 &1506685403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506685405}
+  - component: {fileID: 1506685404}
+  m_Layer: 0
+  m_Name: ObstacleParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1506685404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506685403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff8679bc7a419544a0e6cd495e0cf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAngle: 90
+--- !u!4 &1506685405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506685403}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.506523, y: 2.2934034, z: 4.9268723}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1565381352}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1535773148
 Prefab:
   m_ObjectHideFlags: 0
@@ -439,4 +521,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationAngle: 180
-  isRotating: 0
+--- !u!1 &1565381348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 7f4dfb9ff42543d4095cfc6a4244da07,
+    type: 3}
+  m_PrefabInternal: {fileID: 911635518}
+--- !u!114 &1565381349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1565381348}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff8679bc7a419544a0e6cd495e0cf21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAngle: 45
+--- !u!4 &1565381352 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 7f4dfb9ff42543d4095cfc6a4244da07,
+    type: 3}
+  m_PrefabInternal: {fileID: 911635518}
