@@ -3,14 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WallRotation : MonoBehaviour {
-
-    //[SerializeField] float moveSpeed = .1f;
-    //[SerializeField] float yRotation = 30f;
+    
     [SerializeField] float rotationAngle;
-    [SerializeField] bool isRotating = false;
-    //[SerializeField] float XAngle;
-    //[SerializeField] float YAngle;
-    //[SerializeField] float ZAngle;
+    bool isRotating = false;
 
 
     // Use this for initialization
@@ -27,18 +22,17 @@ public class WallRotation : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.D))
         {
-            print(transform.rotation.eulerAngles.y);
-            Quaternion newRotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y + rotationAngle, 0));
+            float newRotation = transform.rotation.eulerAngles.y + rotationAngle;
             StartCoroutine(Rotate(newRotation, 1));
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
-            Quaternion newRotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y - rotationAngle, 0));
+            float newRotation = transform.rotation.eulerAngles.y - rotationAngle;
             StartCoroutine(Rotate(newRotation, 1));
         }
     }
 
-    IEnumerator Rotate(Quaternion newRot, float duration)
+    IEnumerator Rotate(float newRot, float duration)
     {
         if (isRotating)
         {
@@ -46,13 +40,13 @@ public class WallRotation : MonoBehaviour {
         }
         isRotating = true;
    
-        Quaternion currentRot = transform.rotation;
+        float currentRot = transform.rotation.eulerAngles.y;
 
         float counter = 0;
         while (counter < duration)
         {
             counter += Time.deltaTime;
-            transform.rotation = Quaternion.Lerp(currentRot, newRot, counter / duration);
+            transform.rotation = Quaternion.Euler(0, Mathf.Lerp(currentRot, newRot, counter / duration), 0);
             yield return null;
         }
         isRotating = false;
