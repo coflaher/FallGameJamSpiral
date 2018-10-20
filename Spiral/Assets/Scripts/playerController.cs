@@ -43,7 +43,7 @@ public class playerController : MonoBehaviour {
 		{
 			counter++;
 			float step = dir * distance / duration;
-			transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x, target.position.y, transform.position.z), step);
+			transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 			yield return null;
 		}
 

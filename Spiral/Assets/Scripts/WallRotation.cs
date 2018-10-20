@@ -24,13 +24,13 @@ public class WallRotation : MonoBehaviour {
     {
         if (Input.GetKey(KeyCode.D))
         {
-            float newRotation = transform.rotation.eulerAngles.y + rotationAngle;
+            float newRotation = transform.rotation.eulerAngles.z + rotationAngle;
             StartCoroutine(Rotate(newRotation, 60));
             
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            float newRotation = transform.rotation.eulerAngles.y - rotationAngle;
+            float newRotation = transform.rotation.eulerAngles.z - rotationAngle;
             StartCoroutine(Rotate(newRotation, 60));
         }
     }
@@ -39,13 +39,13 @@ public class WallRotation : MonoBehaviour {
     {
         isRotating = true;
    
-        float currentRot = transform.rotation.eulerAngles.y;
+        float currentRot = transform.rotation.eulerAngles.z;
 
         float counter = 0;
         while (counter < duration)
         {
             counter++;
-            transform.rotation = Quaternion.Euler(0, Mathf.Lerp(currentRot, newRot, counter / duration), 0); //normalizes angle between -180 and 180
+            transform.rotation = Quaternion.Euler(0,0,Mathf.Lerp(currentRot, newRot, counter / duration)); //normalizes angle between -180 and 180
             yield return null;
         }
         
