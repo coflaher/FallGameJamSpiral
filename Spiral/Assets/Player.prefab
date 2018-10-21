@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 23634343025302150}
   - component: {fileID: 54790456585252676}
   - component: {fileID: 135769281150979356}
-  - component: {fileID: 114393738674806134}
   - component: {fileID: 114258367199861932}
   m_Layer: 0
   m_Name: Player
@@ -94,9 +93,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1210190351337020}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.34
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -115,21 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 54790456585252676}
   maxSpeed: 100
---- !u!114 &114393738674806134
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1210190351337020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c0c89e095867ea41b9dde6f1679cbc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startpoint: {fileID: 4813187503932204}
-  endpoint: {fileID: 0}
-  ball: {fileID: 1210190351337020}
-  speed: 4
 --- !u!135 &135769281150979356
 SphereCollider:
   m_ObjectHideFlags: 1
