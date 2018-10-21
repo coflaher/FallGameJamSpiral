@@ -8,8 +8,7 @@ public class WinState : MonoBehaviour {
     [SerializeField] GameObject fade;
     [SerializeField] GameObject sceneChange;
 
-    [SerializeField] GameObject text1;
-    [SerializeField] GameObject text2;
+    [SerializeField] GameObject[] textObjects;
     bool trigger = false;
     void Start()
     {
@@ -32,11 +31,9 @@ public class WinState : MonoBehaviour {
             if (fade != null)
                 fade.GetComponent<Fade>().FadeToBlack(60);
 
-            if (text1 != null)
-                StartCoroutine(FadeOutText(text1.GetComponent<UnityEngine.UI.Text>(), 60));
-
-            if (text2 != null)
-                StartCoroutine(FadeOutText(text2.GetComponent<UnityEngine.UI.Text>(), 60));
+            if (textObjects != null)
+               foreach (GameObject text in textObjects)
+                    StartCoroutine(FadeOutText(text.GetComponent<UnityEngine.UI.Text>(), 60));
 
             StartCoroutine(DelayLoadScene(60));
         }
