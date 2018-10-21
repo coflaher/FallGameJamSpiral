@@ -56,7 +56,7 @@ public class WinState : MonoBehaviour {
         for (int i = 0; i < duration; i++)
             yield return null;
 
-        if (sceneChange.GetComponent<SceneLoader>().GetSceneIndex() == 5)
+        if (sceneChange.GetComponent<SceneLoader>().GetSceneIndex() == 6)
         {
             sceneChange.GetComponent<SceneLoader>().LoadStartScene();
         }
