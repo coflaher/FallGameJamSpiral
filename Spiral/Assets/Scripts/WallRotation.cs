@@ -15,6 +15,7 @@ public class WallRotation : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        Debug.Log(playerController.isMove);
         if (!isRotating && !playerController.isMove)
         {
             Move();
@@ -23,13 +24,13 @@ public class WallRotation : MonoBehaviour {
 
     private void Move()
     {
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             float newRotation = transform.rotation.eulerAngles.z + rotationAngle;
             StartCoroutine(Rotate(newRotation, 60));
             
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.LeftArrow))
         {
             float newRotation = transform.rotation.eulerAngles.z - rotationAngle;
             StartCoroutine(Rotate(newRotation, 60));

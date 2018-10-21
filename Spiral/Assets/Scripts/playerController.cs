@@ -11,6 +11,8 @@ public class playerController : MonoBehaviour {
 	public static bool isMove = false;
 	[SerializeField] float duration;
     [SerializeField] bool collided = false;
+    [SerializeField] int collideTest = 0;
+    float speed = 10f;
 	
 	void Start () 
 	{
@@ -19,8 +21,8 @@ public class playerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () 
-	{	
-        if (!isMove && WallRotation.rotating == 0)
+	{
+        /*if (!isMove && WallRotation.rotating == 0)
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -30,14 +32,22 @@ public class playerController : MonoBehaviour {
             {
                 StartCoroutine(move(-1, target.position));
             }
-        }
+        }*/
 	}
 	void FixedUpdate()
 	{
-	}
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+
+        rb.AddForce(movement * speed);
+    }
+
 
     private void OnCollisionEnter(Collision collision)
     {
+        collideTest += 1;
         if (isMove == true)
         {
             collided = true;

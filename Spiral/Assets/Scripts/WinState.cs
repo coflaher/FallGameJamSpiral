@@ -24,8 +24,8 @@ public class WinState : MonoBehaviour {
     void OnCollisionEnter(Collision collision)
     {
        
-        transform.position = Vector3.MoveTowards(startpoint.position ,endpoint.position, speed * Time.deltaTime);
-        playerController.isMove = true;
+        //transform.position = Vector3.MoveTowards(startpoint.position ,endpoint.position, speed * Time.deltaTime);
+        //playerController.isMove = true;
         
     }
      void OnCollisionExit(Collision collision)
