@@ -15,8 +15,7 @@ public class WallRotation : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        Debug.Log(playerController.isMove);
-        if (!isRotating && !playerController.isMove)
+        if (!isRotating)
         {
             Move();
         }
