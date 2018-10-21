@@ -3505,6 +3505,11 @@ Prefab:
       propertyPath: m_Drag
       value: 3.5
       objectReference: {fileID: 0}
+    - target: {fileID: 23634343025302150, guid: fb7418695044cc14ca8cf6f40a282aa9,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3248af1000749aa48a04aa454d5a2eb7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb7418695044cc14ca8cf6f40a282aa9, type: 2}
   m_IsPrefabAsset: 0
