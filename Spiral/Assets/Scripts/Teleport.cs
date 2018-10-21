@@ -6,7 +6,8 @@ public class Teleport : MonoBehaviour {
 
     [SerializeField] GameObject ball;
     [SerializeField] GameObject teleportPoint;
-    public bool onTrigger = false;
+    [SerializeField] bool enable = true;
+    bool onTrigger = false;
 
     // Use this for initialization
     void OnTriggerEnter(Collider collision)
