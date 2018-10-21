@@ -2997,7 +2997,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4691129393108786, guid: 8408f05d41385bb47957477565b186b0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.0021
+      value: -1.0004
       objectReference: {fileID: 0}
     - target: {fileID: 4691129393108786, guid: 8408f05d41385bb47957477565b186b0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3021,15 +3021,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4691129393108786, guid: 8408f05d41385bb47957477565b186b0, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.014771697
+      value: 0.0111771505
       objectReference: {fileID: 0}
     - target: {fileID: 4691129393108786, guid: 8408f05d41385bb47957477565b186b0, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.014771705
+      value: 0.011177155
       objectReference: {fileID: 0}
     - target: {fileID: 4691129393108786, guid: 8408f05d41385bb47957477565b186b0, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.014771705
+      value: 0.011177155
       objectReference: {fileID: 0}
     - target: {fileID: 114514312131306934, guid: 8408f05d41385bb47957477565b186b0,
         type: 2}
@@ -3041,6 +3041,11 @@ Prefab:
       propertyPath: teleportPoint
       value: 
       objectReference: {fileID: 1387312451}
+    - target: {fileID: 82424484988330728, guid: 8408f05d41385bb47957477565b186b0,
+        type: 2}
+      propertyPath: MinDistance
+      value: 2.4585886
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8408f05d41385bb47957477565b186b0, type: 2}
   m_IsPrefabAsset: 0

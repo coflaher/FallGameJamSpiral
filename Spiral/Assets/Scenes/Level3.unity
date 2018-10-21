@@ -662,7 +662,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4280851806113642, guid: b4cf3ec36b7688549a668b56e9a0960b, type: 2}
       propertyPath: m_LocalScale.x
-      value: 4.12092
+      value: 5.0996385
       objectReference: {fileID: 0}
     - target: {fileID: 1809183359852770, guid: b4cf3ec36b7688549a668b56e9a0960b, type: 2}
       propertyPath: m_Name
@@ -824,7 +824,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4238240615232340, guid: 873c021960104224bafa54de29b92669, type: 2}
       propertyPath: m_LocalScale.x
-      value: 3.7929304
+      value: 4.978221
       objectReference: {fileID: 0}
     - target: {fileID: 1643617370029222, guid: 873c021960104224bafa54de29b92669, type: 2}
       propertyPath: m_Name
@@ -1154,7 +1154,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1210021830}
   m_LocalRotation: {x: -0.70710605, y: -0.001035829, z: 0.0010358292, w: 0.70710605}
-  m_LocalPosition: {x: -30.7, y: -63.8, z: -8.7}
+  m_LocalPosition: {x: 0, y: 0, z: -8.7}
   m_LocalScale: {x: 7.4941, y: 7.4941, z: 7.120969}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1331,7 +1331,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4238240615232340, guid: 873c021960104224bafa54de29b92669, type: 2}
       propertyPath: m_LocalScale.x
-      value: 4.032887
+      value: 4.738642
       objectReference: {fileID: 0}
     - target: {fileID: 4238240615232340, guid: 873c021960104224bafa54de29b92669, type: 2}
       propertyPath: m_LocalScale.y
@@ -2068,7 +2068,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4238240615232340, guid: 873c021960104224bafa54de29b92669, type: 2}
       propertyPath: m_LocalScale.x
-      value: 4.002725
+      value: 5.0534406
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 873c021960104224bafa54de29b92669, type: 2}
@@ -2123,7 +2123,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4280851806113642, guid: b4cf3ec36b7688549a668b56e9a0960b, type: 2}
       propertyPath: m_LocalScale.x
-      value: 4.22857
+      value: 5.28529
       objectReference: {fileID: 0}
     - target: {fileID: 1809183359852770, guid: b4cf3ec36b7688549a668b56e9a0960b, type: 2}
       propertyPath: m_Name
@@ -2227,7 +2227,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4280851806113642, guid: b4cf3ec36b7688549a668b56e9a0960b, type: 2}
       propertyPath: m_LocalScale.x
-      value: 4.1209216
+      value: 5.5632443
       objectReference: {fileID: 0}
     - target: {fileID: 1809183359852770, guid: b4cf3ec36b7688549a668b56e9a0960b, type: 2}
       propertyPath: m_Name
