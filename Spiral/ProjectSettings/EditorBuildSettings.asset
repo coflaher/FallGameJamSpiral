@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: 
+    path: Assets/Scenes/Claudia.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 073f108ba1e683e4eae029a508a3f755
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 49b281d5938bcd74c85142454cd25df0
+  - enabled: 1
+    path: Assets/Scenes/Level4.unity
+    guid: 1f98c1b8e4b523143852fd8ba87a652d
+  - enabled: 1
+    path: Assets/Scenes/levelAndrew.unity
+    guid: fa0a9526632414e428607cbaf1158a2d
+  - enabled: 1
+    path: Assets/Scenes/Level6.unity
+    guid: 4ff62d2dbb870d44c8a56f26d30d0f4a
   m_configObjects: {}
