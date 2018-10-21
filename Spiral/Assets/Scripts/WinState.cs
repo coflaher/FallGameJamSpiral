@@ -56,7 +56,15 @@ public class WinState : MonoBehaviour {
         for (int i = 0; i < duration; i++)
             yield return null;
 
-        sceneChange.GetComponent<SceneLoader>().LoadNextScene();
+        try
+        {
+            sceneChange.GetComponent<SceneLoader>().LoadNextScene();
+        }
+        catch
+        {
+            sceneChange.GetComponent<SceneLoader>().LoadStartScene();
+        }
+        
     }
 
     IEnumerator FadeOutText(UnityEngine.UI.Text text, float duration)
@@ -67,16 +75,4 @@ public class WinState : MonoBehaviour {
             yield return null;
         }
     }
-
-    void OnCollisionExit(Collision collision)
-    {
-      
-    }
-
-     void OnCollisionStay(Collision collision)
-    {
-
-    }
-
-
 }
