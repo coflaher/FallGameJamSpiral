@@ -5,22 +5,26 @@ using UnityEngine;
 public class playerController : MonoBehaviour {
 
 
-	[SerializeField] Rigidbody rb;
+    [SerializeField] Rigidbody rb;
     public bool enableMove = true;
-	float speed = 30f;
-	public float maxSpeed = 100f;
+    float speed = 30f;
+    public float maxSpeed = 100f;
     public AudioSource moveSound;
 
-	void Start () 
-	{
-		rb = GetComponent<Rigidbody>();
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
         rb.GetComponent<Rigidbody>().drag = 3.5f;
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-	}
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 	void FixedUpdate()
 	{
         if (enableMove)
