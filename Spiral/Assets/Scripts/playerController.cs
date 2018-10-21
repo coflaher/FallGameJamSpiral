@@ -13,6 +13,7 @@ public class playerController : MonoBehaviour {
 	void Start () 
 	{
 		rb = GetComponent<Rigidbody>();
+        rb.GetComponent<Rigidbody>().drag = 3.5f;
 	}
 	
 	// Update is called once per frame
