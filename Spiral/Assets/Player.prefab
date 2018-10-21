@@ -114,11 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 54790456585252676}
-  target: {fileID: 0}
-  distance: 1
-  duration: 10
-  collided: 0
-  collideTest: 0
+  maxSpeed: 100
 --- !u!114 &114393738674806134
 MonoBehaviour:
   m_ObjectHideFlags: 1
