@@ -86,7 +86,6 @@ public class playerController : MonoBehaviour {
 			transform.position = Vector3.MoveTowards(transform.position, target, step);
 			yield return null;
 		}
-
         for (int i = 0; i < 5; i++)
 	    	yield return null;
 		isMove = false;
