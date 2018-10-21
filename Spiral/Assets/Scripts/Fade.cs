@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Fade : MonoBehaviour {
+    [SerializeField] bool fadeInOnStart;
 
 	// Use this for initialization
 	void Start () {
-        GetComponent<MeshRenderer>().material.color = new Color(0, 0, 0, 0);
-	}
+        if (fadeInOnStart)
+            FadeFromBlack(60);
+        else
+            GetComponent<MeshRenderer>().material.color = new Color(0, 0, 0, 0);
+    }
 	
 	// Update is called once per frame
 	void Update () {
