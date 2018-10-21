@@ -13,13 +13,13 @@ public class WinState : MonoBehaviour {
     bool trigger = false;
     void Start()
     {
-        
+        DontDestroyOnLoad(transitionSound);
     }
 
 
     // Update is called once per frame
     void Update () {
-		
+        
 	}
     void OnTriggerEnter(Collider collision)
     {
