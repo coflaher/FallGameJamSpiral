@@ -24,13 +24,13 @@ public class WallRotation : MonoBehaviour {
 
     private void Move()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.E))
         {
             float newRotation = transform.rotation.eulerAngles.z + rotationAngle;
             StartCoroutine(Rotate(newRotation, 60));
             
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.Q))
         {
             float newRotation = transform.rotation.eulerAngles.z - rotationAngle;
             StartCoroutine(Rotate(newRotation, 60));
