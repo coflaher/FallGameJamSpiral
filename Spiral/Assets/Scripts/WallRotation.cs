@@ -37,7 +37,8 @@ public class WallRotation : MonoBehaviour {
         {
             float newRotation = transform.rotation.eulerAngles.z - rotationAngle;
             StartCoroutine(Rotate(newRotation, 60));
-            wallSource.volume = 1.0f;
+            if (wallSource != null)
+                wallSource.volume = 1.0f;
         }
         else
         {
