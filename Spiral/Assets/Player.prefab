@@ -93,7 +93,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1210190351337020}
   serializedVersion: 2
-  m_Mass: 0.34
+  m_Mass: 0.4
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 54790456585252676}
+  enableMove: 1
   maxSpeed: 100
 --- !u!135 &135769281150979356
 SphereCollider:
