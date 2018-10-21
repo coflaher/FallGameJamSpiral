@@ -13,7 +13,7 @@ public class WinState : MonoBehaviour {
     bool trigger = false;
     void Start()
     {
-        DontDestroyOnLoad(transitionSound);
+        
     }
 
 
