@@ -6,6 +6,7 @@ using UnityEngine;
 public class WinState : MonoBehaviour {
    [SerializeField] GameObject ball;
     [SerializeField] GameObject fade;
+    [SerializeField] GameObject sceneChange;
     bool trigger = false;
     void Start()
     {
@@ -22,7 +23,8 @@ public class WinState : MonoBehaviour {
         if (ball == collision.gameObject && !trigger)
         {
             trigger = true;
-            fade.GetComponent<Fade>().FadeToBlack(60);
+            sceneChange.GetComponent<SceneLoader>().LoadNextScene();
+            //fade.GetComponent<Fade>().FadeToBlack(60);
         }
         //transform.position = Vector3.MoveTowards(startpoint.position ,endpoint.position, speed * Time.deltaTime);
         //playerController.isMove = true;
