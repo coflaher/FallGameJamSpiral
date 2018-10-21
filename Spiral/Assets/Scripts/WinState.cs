@@ -4,16 +4,12 @@ using UnityEngine;
 
 
 public class WinState : MonoBehaviour {
-    public Transform startpoint;
-    public Transform endpoint;
    [SerializeField] GameObject ball;
-    
-    public float speed = 4f;
-    private Rigidbody rb;
+    [SerializeField] GameObject fade;
+    bool trigger = false;
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        
+
     }
 
 
@@ -21,9 +17,13 @@ public class WinState : MonoBehaviour {
     void Update () {
 		
 	}
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
-       
+        if (ball == collision.gameObject && !trigger)
+        {
+            trigger = true;
+            fade.GetComponent<Fade>().FadeToBlack(60);
+        }
         //transform.position = Vector3.MoveTowards(startpoint.position ,endpoint.position, speed * Time.deltaTime);
         //playerController.isMove = true;
         
