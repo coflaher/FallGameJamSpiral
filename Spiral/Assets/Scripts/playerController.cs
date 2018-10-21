@@ -9,7 +9,8 @@ public class playerController : MonoBehaviour {
     public bool enableMove = true;
 	float speed = 30f;
 	public float maxSpeed = 100f;
-	
+    public AudioSource moveSound;
+
 	void Start () 
 	{
 		rb = GetComponent<Rigidbody>();
@@ -37,7 +38,19 @@ public class playerController : MonoBehaviour {
                 rb.velocity = rb.velocity.normalized * maxSpeed;
 
             }
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            {
+                // moveSound.Play();
+                moveSound.volume = 1.0f;
+            }
+            else
+            {
+                // moveSound.Stop();
+                moveSound.volume = 0.0f;
+            }
+            
         }
+        
     }
 
 }

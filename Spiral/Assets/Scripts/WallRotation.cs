@@ -7,6 +7,7 @@ public class WallRotation : MonoBehaviour {
     [SerializeField] float rotationAngle;
     bool isRotating = false;
     public static int rotating = 0;
+    public AudioSource wallSource;
    
     // Use this for initialization
     void Start() {
@@ -27,12 +28,18 @@ public class WallRotation : MonoBehaviour {
         {
             float newRotation = transform.rotation.eulerAngles.z + rotationAngle;
             StartCoroutine(Rotate(newRotation, 60));
-            
+            wallSource.volume = 1.0f;
+
         }
         else if (Input.GetKey(KeyCode.Q))
         {
             float newRotation = transform.rotation.eulerAngles.z - rotationAngle;
             StartCoroutine(Rotate(newRotation, 60));
+            wallSource.volume = 1.0f;
+        }
+        else
+        {
+            wallSource.volume = 0.0f;
         }
     }
 

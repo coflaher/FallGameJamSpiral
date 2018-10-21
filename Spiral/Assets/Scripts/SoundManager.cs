@@ -37,7 +37,7 @@ public class SoundManager : MonoBehaviour {
     public void Play(AudioClip clip)
     {
         efxSource.clip = clip;
-        efxSource.Play();
+        efxSource.PlayOneShot(clip);
     }
 
     // Play a single clip through the music source.
@@ -57,5 +57,9 @@ public class SoundManager : MonoBehaviour {
         efxSource.clip = clips[randomIndex];
         efxSource.Play();
     }
+
+
+
+    
 
 }

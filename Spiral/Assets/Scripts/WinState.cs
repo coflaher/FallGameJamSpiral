@@ -9,6 +9,7 @@ public class WinState : MonoBehaviour {
     [SerializeField] GameObject sceneChange;
 
     [SerializeField] GameObject[] textObjects;
+    public AudioSource transitionSound;
     bool trigger = false;
     void Start()
     {
@@ -35,6 +36,7 @@ public class WinState : MonoBehaviour {
                foreach (GameObject text in textObjects)
                     StartCoroutine(FadeOutText(text.GetComponent<UnityEngine.UI.Text>(), 60));
 
+            transitionSound.Play();
             StartCoroutine(DelayLoadScene(60));
         }
     }

@@ -7,6 +7,7 @@ public class Teleport : MonoBehaviour {
     [SerializeField] GameObject ball;
     [SerializeField] GameObject teleportPoint;
     [SerializeField] bool enable = true;
+    public AudioSource teleportSound;
     bool onTrigger = false;
 
     // Use this for initialization
@@ -14,6 +15,7 @@ public class Teleport : MonoBehaviour {
     {
         if (ball == collision.gameObject && !onTrigger)
         {
+            teleportSound.Play();
             ball.GetComponent<playerController>().enableMove = false;
             teleportPoint.GetComponent<Teleport>().onTrigger = true;
             StartCoroutine(BallSucc(20));
