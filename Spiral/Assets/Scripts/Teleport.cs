@@ -13,9 +13,10 @@ public class Teleport : MonoBehaviour {
     // Use this for initialization
     void OnTriggerEnter(Collider collision)
     {
-        if (ball == collision.gameObject && !onTrigger)
+        if (ball == collision.gameObject && !onTrigger && ball.GetComponent<Collider>().enabled)
         {
             teleportSound.Play();
+            ball.GetComponent<Collider>().enabled = false;
             ball.GetComponent<playerController>().enableMove = false;
             teleportPoint.GetComponent<Teleport>().onTrigger = true;
             StartCoroutine(BallSucc(20));
@@ -34,7 +35,9 @@ public class Teleport : MonoBehaviour {
             ball.transform.position = Vector3.MoveTowards(ball.transform.position, transform.position, i / duration);
             yield return null;
         }
+
         ball.transform.position = teleportPoint.transform.position;
+        ball.GetComponent<Collider>().enabled = true;
         ball.GetComponent<playerController>().enableMove = true;
     }
 }
