@@ -14,6 +14,11 @@ public class SceneLoader : MonoBehaviour
         //gameStatus = FindObjectOfType<GameSession>();
     }
 
+    public int GetSceneIndex()
+    {
+        return SceneManager.GetActiveScene().buildIndex; ;
+    }
+
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);

@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -57,13 +56,13 @@ public class WinState : MonoBehaviour {
         for (int i = 0; i < duration; i++)
             yield return null;
 
-        try
-        {
-            sceneChange.GetComponent<SceneLoader>().LoadNextScene();
-        }
-        catch
+        if (sceneChange.GetComponent<SceneLoader>().GetSceneIndex() == 5)
         {
             sceneChange.GetComponent<SceneLoader>().LoadStartScene();
+        }
+        else
+        {
+            sceneChange.GetComponent<SceneLoader>().LoadNextScene();
         }
         
     }
